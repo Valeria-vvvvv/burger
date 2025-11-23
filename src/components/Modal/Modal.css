@@ -1,0 +1,49 @@
+/* Импорт базовых стилей модальных окон */
+@import '../shared/ModalBase.css';
+
+/* Специфичные стили для модального окна регистрации */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+.form-group input {
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #d58c51;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.form-group input::placeholder {
+  color: #b0b0b0;
+}
+
+.modal-submit {
+  margin-top: 20px;
+  width: 100%;
+  justify-content: center;
+  padding: 18px;
+  font-size: 16px;
+}

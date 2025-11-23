@@ -1,0 +1,123 @@
+.order {
+  background: url("../../assets/img/order_bg.png") no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.order::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(25, 20, 17, 0.8);
+}
+
+.order .container {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.order-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-top: 60px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.order-image {
+  max-width: 500px;
+  height: auto;
+  flex-shrink: 1;
+}
+
+.order-form {
+  flex: 1;
+  max-width: 500px;
+}
+
+.order-form-text {
+  font-size: 18px;
+  line-height: 26px;
+  color: #e0e0e0;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.order-form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-form-input {
+  position: relative;
+}
+
+.order-form-input input {
+  width: 100%;
+  padding: 20px 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
+  border-radius: 15px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.order-form-input input:focus {
+  outline: none;
+  border-color: #d58c51;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.order-form-input input::placeholder {
+  color: #b0b0b0;
+}
+
+.order-form-input.error input {
+  border-color: #ff4444;
+  background: rgba(255, 68, 68, 0.1);
+}
+
+.order-button {
+  margin-top: 20px;
+  width: 100%;
+  justify-content: center;
+  padding: 20px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .order-content {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .order-image {
+    max-width: 100%;
+    width: 80%;
+  }
+  
+  .order-form {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .order .container {
+    padding: 0 15px;
+  }
+  
+  .order-content {
+    gap: 30px;
+  }
+}

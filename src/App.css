@@ -1,0 +1,39 @@
+.App {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 80px 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.mein {
+  background: url("./assets/img/main_bg.png") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+
+.why {
+  background-color: #1f1a16;
+}
+
+.products {
+  background-color: #191411;
+}
+
+.order {
+  background: url("./assets/img/order_bg.png") no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.footer {
+  background-color: #1f1a16;
+  padding: 40px 0;
+}

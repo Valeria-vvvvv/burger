@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/fonts/Gilroy-Semibold.ttf");
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("./assets/fonts/Merriweather-Black.ttf");
+}
+
+/* Анимация для спиннера загрузки */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  background-color: #191411;
+  font-family: "Gilroy", sans-serif;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.common-title {
+  font-family: "Merriweather", serif;
+  font-size: 48px;
+  line-height: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.button {
+  background: #d58c51;
+  border-radius: 50px;
+  border: none;
+  padding: 20px 40px;
+  font-family: "Gilroy", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #191411;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.button:hover {
+  background: #c17a3f;
+  transform: translateY(-2px);
+}
+
+.home-page {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .common-title {
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 30px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .button {
+    padding: 16px 32px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .common-title {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 25px;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  .button {
+    padding: 14px 28px;
+    font-size: 13px;
+  }
+}

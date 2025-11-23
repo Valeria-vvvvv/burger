@@ -1,0 +1,19 @@
+.footer {
+  background-color: #1f1a16;
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo img {
+  height: 50px;
+}
+
+.footer-rights {
+  font-size: 14px;
+  color: #888;
+}

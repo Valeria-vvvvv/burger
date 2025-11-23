@@ -1,0 +1,133 @@
+.product-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  /* max-height: 250px; */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image img {
+  width: 120%;
+  height: 120%;
+  object-fit: contain;
+  transform: scale(1.2);
+}
+
+.product-content {
+  padding: 20px;
+}
+
+.product-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.product-description {
+  font-size: 13px;
+  line-height: 18px;
+  color: #b0b0b0;
+  margin-bottom: 15px;
+  height: 45px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #d58c51;
+}
+
+.product-weight {
+  font-size: 14px;
+  color: #888;
+}
+
+.product-button {
+  padding: 12px 20px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.product-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 120px;
+}
+
+.btn-primary {
+  background: #d58c51;
+  color: #191411;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #c17a3f;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #d58c51;
+  border: 2px solid #d58c51;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-secondary:hover {
+  background: #d58c51;
+  color: #191411;
+}
+
+@media (max-width: 768px) {
+  .product-actions {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .product-button {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 12px;
+  }
+}
