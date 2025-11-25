@@ -1,0 +1,209 @@
+/* Импорт базовых стилей модальных окон */
+@import "../shared/ModalBase.css";
+
+/* Специфичные стили для модального окна корзины */
+.basket-modal {
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.empty-basket {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.empty-basket p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.basket-items {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.basket-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  gap: 15px;
+}
+
+.basket-item:last-child {
+  border-bottom: none;
+}
+
+.basket-item-image {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.basket-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.basket-item-info {
+  flex: 1;
+}
+
+.basket-item-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #191411;
+}
+
+.basket-item-details {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+/* Контролы количества в модальном окне */
+.basket-modal .quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.basket-modal .quantity-btn {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #ff6b35;
+  background: transparent;
+  color: #ff6b35;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.basket-modal .quantity-btn:hover {
+  background: #ff6b35;
+  color: white;
+}
+
+.basket-modal .quantity-btn:active {
+  transform: scale(0.95);
+}
+
+.basket-modal .quantity-btn.decrease:hover {
+  background: #ff4444;
+  border-color: #ff4444;
+}
+
+.basket-item-price {
+  color: #ff6b35;
+  font-weight: 600;
+}
+
+.basket-item-quantity {
+  color: #666;
+}
+
+.basket-item-total {
+  color: #191411;
+  font-weight: 600;
+}
+
+.basket-item-remove {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: #ff4444;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.basket-item-remove:hover {
+  background: #cc0000;
+}
+
+.basket-footer {
+  border-top: 2px solid #eee;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.basket-total {
+  font-size: 18px;
+  color: #191411;
+}
+
+.basket-checkout {
+  background: #ff6b35;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.basket-checkout:hover {
+  background: #e55a2b;
+}
+
+/* Адаптивность для корзины */
+@media (max-width: 768px) {
+  .basket-modal {
+    max-width: 90vw;
+    margin: 20px;
+  }
+
+  .basket-item {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .basket-item-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .basket-item-name {
+    font-size: 14px;
+  }
+
+  .basket-item-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .basket-footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .basket-checkout {
+    width: 100%;
+  }
+}

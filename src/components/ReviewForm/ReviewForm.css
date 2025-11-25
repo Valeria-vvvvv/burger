@@ -1,0 +1,85 @@
+.review-form {
+  background: #2a2520;
+  border-radius: 16px;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+.review-form-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #d58c51;
+  margin-bottom: 24px;
+}
+
+.review-form .form-group {
+  margin-bottom: 20px;
+}
+
+.review-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #3a3530;
+  border-radius: 8px;
+  background: #1a1611;
+  color: white;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #d58c51;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.review-form .submit-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #d58c51, #c17a3f);
+  border: none;
+  border-radius: 8px;
+  color: #191411;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.review-form .submit-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #c17a3f, #a86a35);
+  transform: translateY(-2px);
+}
+
+.review-form .submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.review-form-login {
+  background: #2a2520;
+  border-radius: 16px;
+  padding: 30px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.review-form-login p {
+  color: #8a7a6b;
+  font-size: 16px;
+}

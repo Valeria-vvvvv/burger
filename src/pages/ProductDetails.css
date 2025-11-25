@@ -1,0 +1,403 @@
+/* Стили для страницы детальной информации о товаре */
+
+.product-details-page {
+  padding: 60px 0;
+  min-height: 70vh;
+}
+
+/* Кнопка возврата */
+.back-button {
+  background: transparent;
+  border: 2px solid #ff6b35;
+  color: #ff6b35;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-button:hover {
+  background: #ff6b35;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Основной контент */
+.product-details-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Изображение товара */
+.product-details-image {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.product-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Бейдж с количеством в корзине */
+.quantity-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #ff6b35;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+/* Информация о товаре */
+.product-details-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.product-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Мета информация (цена и вес) */
+.product-meta {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.product-price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff6b35;
+}
+
+.product-weight {
+  font-size: 18px;
+  color: #e0e0e0;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 12px;
+}
+
+/* Описание товара */
+.product-description h3 {
+  font-size: 20px;
+  color: white;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+.product-description p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+/* КБЖУ товара */
+.product-nutrition h3 {
+  font-size: 20px;
+  color: white;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+}
+
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.nutrition-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nutrition-label {
+  font-size: 14px;
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+.nutrition-value {
+  font-size: 16px;
+  color: #ff6b35;
+  font-weight: 700;
+}
+
+/* Действия с товаром */
+.product-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Секция добавления в корзину */
+.add-to-basket-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-to-basket-btn {
+  background: linear-gradient(135deg, #ff6b35, #e55a2b);
+  color: white;
+  border: none;
+  padding: 18px 32px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.add-to-basket-btn:hover {
+  background: linear-gradient(135deg, #e55a2b, #cc4a1f);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+}
+
+/* Секция управления количеством */
+.quantity-controls-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quantity-controls-section h4 {
+  color: white;
+  font-size: 16px;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.quantity-btn {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #ff6b35;
+  background: transparent;
+  color: #ff6b35;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.quantity-btn:hover {
+  background: #ff6b35;
+  color: white;
+  transform: scale(1.05);
+}
+
+.quantity-btn:active {
+  transform: scale(0.95);
+}
+
+.quantity-btn.decrease:hover {
+  background: #ff4444;
+  border-color: #ff4444;
+}
+
+.quantity-display {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  min-width: 60px;
+  text-align: center;
+}
+
+.total-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ff6b35;
+  text-align: center;
+}
+
+/* Кнопка перехода в корзину */
+.go-to-basket-btn {
+  background: transparent;
+  border: 2px solid #ff6b35;
+  color: #ff6b35;
+  padding: 15px 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.go-to-basket-btn:hover {
+  background: #ff6b35;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+}
+
+/* Страница "товар не найден" */
+.product-not-found {
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.product-not-found h1 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.product-not-found p {
+  color: #e0e0e0;
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .product-details-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .product-image {
+    height: 400px;
+  }
+
+  .product-title {
+    font-size: 28px;
+  }
+
+  .product-price {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-details-page {
+    padding: 40px 0;
+  }
+
+  .back-button {
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .product-image {
+    height: 300px;
+  }
+
+  .product-title {
+    font-size: 24px;
+  }
+
+  .product-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .product-price {
+    font-size: 22px;
+  }
+
+  .quantity-controls {
+    justify-content: center;
+  }
+
+  .quantity-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .add-to-basket-btn {
+    padding: 16px 24px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-details-page {
+    padding: 30px 0;
+  }
+
+  .product-title {
+    font-size: 20px;
+  }
+
+  .product-price {
+    font-size: 20px;
+  }
+
+  .quantity-controls-section {
+    padding: 20px;
+  }
+
+  .quantity-controls {
+    gap: 15px;
+  }
+
+  .quantity-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .quantity-display {
+    font-size: 20px;
+  }
+}
+
+/* Секция отзывов */
+.product-reviews-section {
+  margin-top: 60px;
+  padding-top: 60px;
+  border-top: 1px solid #3a3530;
+}
