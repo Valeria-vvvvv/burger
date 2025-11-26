@@ -15,6 +15,16 @@ const HEADERS = [
   { name: "Вес", key: "weight" },
 ];
 
+const CATEGORIES = [
+  "Бургеры",
+  "Напитки",
+  "Первые блюда",
+  "Вторые блюда",
+  "Салаты",
+  "Десерты",
+  "Закуски",
+];
+
 export const Admin = () => {
   // Проверка авторизации
   const { user } = useAuth();
@@ -162,8 +172,7 @@ export const Admin = () => {
 
         {products.length === 0 && (
           <p style={{ color: "#fff", textAlign: "center", marginTop: "2rem" }}>
-            Нет продуктов. Добавьте первый продукт или выполните команду{" "}
-            <code>window.seedData()</code> в консоли браузера.
+            Нет продуктов. Добавьте первый продукт.
           </p>
         )}
 
@@ -200,14 +209,19 @@ export const Admin = () => {
             rows={3}
           />
 
-          <input
-            type="text"
-            placeholder="Категория (например: Бургеры, Напитки, Первые блюда)"
+          <select
             name="category"
             value={formData.category}
             onChange={handleChange}
             required
-          />
+          >
+            <option value="">Выберите категорию</option>
+            {CATEGORIES.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
 
           <input
             type="number"
