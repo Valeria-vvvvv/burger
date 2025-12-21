@@ -1,0 +1,102 @@
+.admin-page {
+  min-height: calc(100vh - 200px);
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.admin-page .container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.admin-page h1 {
+  color: #d58c51;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.admin-add-button {
+  width: auto;
+  min-width: 150px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+/* Простая форма */
+.simple-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.simple-form input,
+.simple-form textarea,
+.simple-form select {
+  padding: 0.8rem;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 1rem;
+  font-family: "Gilroy", sans-serif;
+}
+
+.simple-form input:focus,
+.simple-form textarea:focus,
+.simple-form select:focus {
+  outline: none;
+  border-color: #d58c51;
+  box-shadow: 0 0 0 2px rgba(213, 140, 81, 0.2);
+}
+
+.simple-form input::placeholder,
+.simple-form textarea::placeholder {
+  color: #888;
+}
+
+.simple-form select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d58c51' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+
+.simple-form select option {
+  background: #2a2a2a;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.simple-form select option:hover,
+.simple-form select option:checked {
+  background: #d58c51;
+  color: #191411;
+}
+
+.simple-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.simple-form .button {
+  margin-top: 1rem;
+  width: auto;
+  align-self: flex-end;
+  min-width: 120px;
+  padding: 0.8rem 1.5rem;
+}
