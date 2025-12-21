@@ -3,6 +3,12 @@ import { create } from "zustand";
 // Zustand стор для управления корзиной товаров
 export const useBasketList = create((set, get) => {
   // Определяем функции как переменные
+  const getStorageKey = () => {
+    const userId = get()?.currentUserId;
+    if (!userId) return null;
+    return `basket-list-${userId}`;
+  };
+
   const setCurrentUserFunc = (userId) => {
     if (!userId) {
       // Очистка состояния при выходе пользователя
@@ -123,59 +129,53 @@ export const useBasketList = create((set, get) => {
     set({ basketList: updatedCart });
   };
 
-  const getStorageKey = () => {
-    const userId = get()?.currentUserId;
-    if (!userId) return null;
-    return `basket-list-${userId}`;
-  };
-
   // Инициализация
   // Начальное состояние стора
-  const state = {
-    // Начальное состояние стора
-    currentUserId: null, // ID текущего авторизованного пользователя
-    basketList: [], // Массив товаров в корзине пользователя
+  // const state = {
+  //   // Начальное состояние стора
+  //   currentUserId: null, // ID текущего авторизованного пользователя
+  //   basketList: [], // Массив товаров в корзине пользователя
 
-    // Вычисляемое поле - общее количество товаров
-    get totalQuantity() {
-      const basketList = get().basketList || [];
-      return basketList.reduce(
-        (total, item) => total + (item?.cartQuantity || 0),
-        0
-      );
-    },
+  //   // Вычисляемое поле - общее количество товаров
+  //   get totalQuantity() {
+  //     const basketList = get().basketList || [];
+  //     return basketList.reduce(
+  //       (total, item) => total + (item?.cartQuantity || 0),
+  //       0
+  //     );
+  //   },
 
-    /**
-     * Подсчет общего количества товаров в корзине
-     * Вычисляемое значение, не хранится в состоянии
-     */
-    getTotalQuantity: () => {
-      const basketList = get()?.basketList || [];
-      let totalQuantity = 0;
+  //   /**
+  //    * Подсчет общего количества товаров в корзине
+  //    * Вычисляемое значение, не хранится в состоянии
+  //    */
+  //   getTotalQuantity: () => {
+  //     const basketList = get()?.basketList || [];
+  //     let totalQuantity = 0;
 
-      if (basketList.length > 0) {
-        basketList.forEach((item) => {
-          if (item?.cartQuantity) {
-            totalQuantity += item?.cartQuantity;
-          }
-        });
-      }
-      return totalQuantity;
-    },
+  //     if (basketList.length > 0) {
+  //       basketList.forEach((item) => {
+  //         if (item?.cartQuantity) {
+  //           totalQuantity += item?.cartQuantity;
+  //         }
+  //       });
+  //     }
+  //     return totalQuantity;
+  //   },
 
-    // Получение ключа localStorage для текущего пользователя
-    getStorageKey: () => {
-      const userId = get()?.currentUserId;
-      if (!userId) return null;
-      return `basket-list-${userId}`;
-    },
+  //   // Получение ключа localStorage для текущего пользователя
+  //   getStorageKey: () => {
+  //     const userId = get()?.currentUserId;
+  //     if (!userId) return null;
+  //     return `basket-list-${userId}`;
+  //   },
 
-    // Возвращаемые значения стора (доступны в компонентах через useBasketList())
-    setCurrentUser: setCurrentUserFunc,
-    addToBasket: addToBasketFunc,
-    updateQuantity: updateQuantityFunc,
-    removeFromBasket: removeFromBasketFunc,
-  };
+  //   // Возвращаемые значения стора (доступны в компонентах через useBasketList())
+  //   setCurrentUser: setCurrentUserFunc,
+  //   addToBasket: addToBasketFunc,
+  //   updateQuantity: updateQuantityFunc,
+  //   removeFromBasket: removeFromBasketFunc,
+  // };
 
   // Возвращаемые значения стора (доступны в компонентах через useBasketList())
   return {
@@ -185,5 +185,6 @@ export const useBasketList = create((set, get) => {
     addToBasket: addToBasketFunc,
     updateQuantity: updateQuantityFunc,
     removeFromBasket: removeFromBasketFunc,
+    removeItem: removeItemFunc,
   };
 });

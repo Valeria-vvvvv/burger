@@ -1,4 +1,3 @@
-import React from "react";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import { useBasketList } from "../../store/useBasketList";
 import { useAuth } from "../../hooks/useAuth";
