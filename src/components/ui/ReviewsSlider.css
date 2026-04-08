@@ -1,0 +1,154 @@
+.reviews-slider-section {
+  padding: 4rem 0;
+  background-color: #1f1a16;
+}
+
+.section-title {
+  text-align: center;
+  color: #d58c51;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.reviews-swiper {
+  padding-bottom: 3rem;
+}
+
+.review-slide {
+  background: rgba(30, 30, 30, 0.8);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+  height: auto;
+  min-height: 200px;
+}
+
+.review-slide:hover {
+  transform: translateY(-5px);
+}
+
+.review-header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.review-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d58c51, #b8743d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #191411;
+  flex-shrink: 0;
+}
+
+.review-info {
+  flex: 1;
+}
+
+.review-name {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.review-rating {
+  margin-bottom: 0.3rem;
+}
+
+.star {
+  color: #444;
+  font-size: 1rem;
+  margin-right: 2px;
+}
+
+.star.filled {
+  color: #d58c51;
+}
+
+.review-date {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.review-text {
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Стили для Swiper */
+.reviews-swiper .swiper-button-next,
+.reviews-swiper .swiper-button-prev {
+  color: #d58c51;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+}
+
+.reviews-swiper .swiper-button-next:after,
+.reviews-swiper .swiper-button-prev:after {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.reviews-swiper .swiper-pagination-bullet {
+  background: rgba(213, 140, 81, 0.3);
+  opacity: 1;
+}
+
+.reviews-swiper .swiper-pagination-bullet-active {
+  background: #d58c51;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .reviews-slider-section {
+    padding: 2rem 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .review-slide {
+    padding: 1.5rem;
+    min-height: 180px;
+  }
+
+  .review-avatar {
+    width: 45px;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+
+  .review-name {
+    font-size: 1rem;
+  }
+
+  .review-text {
+    font-size: 0.9rem;
+  }
+
+  .reviews-swiper .swiper-button-next,
+  .reviews-swiper .swiper-button-prev {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-slide {
+    padding: 1rem;
+  }
+}

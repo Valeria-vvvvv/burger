@@ -1,0 +1,85 @@
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  width: 40%;
+  max-width: 600px;
+  height: 100%;
+  background: #1a1a1a;
+  padding: 2rem;
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.drawer-right {
+  right: 0;
+}
+
+.drawer-left {
+  left: 0;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.drawer-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d58c51;
+  margin: 0;
+  flex: 1;
+}
+
+.drawer-close {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.drawer-close:hover {
+  background: rgba(213, 140, 81, 0.2);
+  color: #d58c51;
+}
+
+.drawer-content {
+  color: #fff;
+}
+
+.drawer-footer {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .drawer {
+    width: 80%;
+  }
+}

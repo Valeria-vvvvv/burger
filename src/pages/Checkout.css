@@ -1,0 +1,184 @@
+.checkout-page {
+  padding: 2rem 0;
+  background-color: #191411;
+}
+
+.checkout-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.order-summary {
+  background: #1f1a16;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  height: fit-content;
+}
+
+.order-summary h2 {
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.order-items {
+  margin-bottom: 1.5rem;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.item-info p {
+  margin: 0;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.item-total {
+  margin-left: auto;
+  font-weight: bold;
+  color: #ff6b35;
+}
+
+.order-total {
+  padding-top: 1rem;
+  border-top: 2px solid #d58c51;
+  font-size: 1.2rem;
+  text-align: right;
+  color: #d58c51;
+}
+
+.checkout-form {
+  background: #1f1a16;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.checkout-form h2 {
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: white;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #2a2520;
+  color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #d58c51;
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: #ff6b35;
+}
+
+.error-message {
+  display: block;
+  margin-top: 0.5rem;
+  color: #ff6b35;
+  font-size: 0.9rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  color: white;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 20px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-actions .button {
+  flex: 1;
+}
+
+.empty-checkout {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.empty-checkout p {
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .checkout-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .checkout-page {
+    padding: 1rem 0;
+  }
+
+  .order-summary,
+  .checkout-form {
+    padding: 1.5rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}
